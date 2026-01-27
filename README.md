@@ -1,4 +1,19 @@
 # Skills Hub (Tauri Desktop)
+## 开发记录
+### 启动报错：
+- node18+
+#### rust版本问题：
+package `icu_normalizer v2.1.1` cannot be built because it requires rustc 1.83 or newer, while the currently active rustc version is 1.72.0
+
+升级rust版本：
+```
+rustup update stable，但是这个命令只能到稳定版本。
+
+优先方案：升级 Rust 到满足要求的版本，从根本解决兼容问题。
+最终是：rustup install 1.83.0 && rustup default 1.83.0 
+```
+
+## 其他
 
 A cross-platform desktop app (Tauri + React) to manage Agent Skills in one place and sync them to multiple AI coding tools’ global skills directories (prefer symlink/junction, fallback to copy) — “Install once, sync everywhere”.
 
